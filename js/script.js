@@ -101,38 +101,3 @@ window.addEventListener('scroll', () => {
 //========================================
 
 
-
-document.addEventListener("DOMContentLoaded", function () {
-	const sidebar = document.querySelector(".sidebar");
-	const openBtn = document.querySelector(".filter-icon"); // Кнопка відкриття
-	const closeBtn = document.querySelector(".sidebar__close-btn"); // Кнопка закриття
-
-	if (!sidebar || !openBtn || !closeBtn) return; // Переконуємося, що всі елементи існують
-
-	function toggleSidebar() {
-		const isVisible = sidebar.classList.toggle("visible");
-		sidebar.style.pointerEvents = isVisible ? "all" : "none";
-	}
-
-	// Додаємо події до обох кнопок
-	openBtn.addEventListener("click", function (event) {
-		event.stopPropagation();
-		toggleSidebar();
-	});
-
-	closeBtn.addEventListener("click", function (event) {
-		event.stopPropagation();
-		toggleSidebar();
-	});
-
-	// Закриття при кліку поза сайдбаром (на мобільних)
-	document.addEventListener("click", function (event) {
-		if (window.innerWidth <= 991.98 &&
-			sidebar.classList.contains("visible") &&
-			!sidebar.contains(event.target) &&
-			!openBtn.contains(event.target)) {
-			toggleSidebar();
-		}
-	});
-});
-
