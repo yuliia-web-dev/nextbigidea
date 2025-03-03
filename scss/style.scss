@@ -316,6 +316,45 @@ body {
 		}
 	}
 }
+//===================COMPANIES=========================
+.companies {
+	padding: toRem(50);
+
+	// .companies__container
+
+	&__container {
+		text-align: center;
+	}
+
+	// .companies__title
+
+	&__title {
+		color: #9ea0a2;
+		font-size: toRem(18);
+		&:not(:last-child) {
+			margin-bottom: toRem(50);
+		}
+	}
+
+	// .companies__wrapper
+
+	&__wrapper {
+		margin: 0 auto;
+		max-width: toRem(800);
+		display: flex;
+		flex-wrap: wrap;
+		gap: toRem(20);
+		justify-content: space-around;
+		@media (max-width: toEm(400)) {
+			justify-content: center;
+		}
+		img{
+			width: toRem(120);
+			height: toRem(40);
+			object-fit: contain;
+		}
+	}
+}
 
 //==============================CATEGORY===================
 
@@ -345,7 +384,6 @@ body {
 		flex-direction: column;
 		align-items: center;
 		gap: toRem(30);
-
 	}
 
 	// .category__item
@@ -485,18 +523,7 @@ body {
 		}
 	}
 }
-.filter-icon {
-	align-self: flex-end;
-	padding-top: toRem(10);
-	img {
-		width: toRem(35);
-		height: toRem(35);
-	}
-	z-index: 20;
-	@media (min-width: toEm(991.98)) {
-		display: none;
-	}
-}
+
 //=====================FOOTER=============================
 
 .footer {
