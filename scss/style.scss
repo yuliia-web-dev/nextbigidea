@@ -366,7 +366,9 @@ body {
 	}
 }
 .sidebar {
-	padding: toRem(20) toRem(40);
+	padding: toRem(20) toRem(15);
+	padding-right: toRem(50);
+
 	width: fit-content;
 	height: fit-content;
 	background-color: #fff;

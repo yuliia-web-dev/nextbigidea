@@ -473,7 +473,8 @@ body.menu-open {
   margin-bottom: 1.875rem;
 }
 .sidebar {
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem 0.9375rem;
+  padding-right: 3.125rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
