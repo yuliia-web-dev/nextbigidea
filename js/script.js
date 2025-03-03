@@ -1,26 +1,26 @@
 "use strict"
 
-document.addEventListener("click", documentActions);
+// document.addEventListener("click", documentActions);
 
-function documentActions(e) {
-	const targetElement = e.target;
+// function documentActions(e) {
+// 	const targetElement = e.target;
 
-	if (targetElement.closest('.icon-menu')) {
-		document.body.classList.toggle('menu-open');
-	}
+// 	if (targetElement.closest('.icon-menu')) {
+// 		document.body.classList.toggle('menu-open');
+// 	}
 
-	// Перевірка на клік по посиланню всередині меню
-	if (targetElement.closest('.menu') && targetElement.tagName === 'A') {
-		document.body.classList.remove('menu-open');
-	}
-}
+// 	// Перевірка на клік по посиланню всередині меню
+// 	if (targetElement.closest('.menu') && targetElement.tagName === 'A') {
+// 		document.body.classList.remove('menu-open');
+// 	}
+// }
 
-const icons = document.querySelectorAll('.icon-menu');
-icons.forEach(icon => {
-	icon.addEventListener('click', (event) => {
-		icon.classList.toggle("active");
-	});
-});
+// const icons = document.querySelectorAll('.icon-menu');
+// icons.forEach(icon => {
+// 	icon.addEventListener('click', (event) => {
+// 		icon.classList.toggle("active");
+// 	});
+// });
 
 // let arrow = document.getElementById("line");
 
@@ -100,18 +100,39 @@ window.addEventListener('scroll', () => {
 // });
 //========================================
 
-// const scrollButton = document.querySelector(".hero__scroll");
-
-// if (scrollButton) {
-// 	scrollButton.addEventListener("click", () => {
-// 		const nextSection = scrollButton.closest("section")?.nextElementSibling;
-// 		if (nextSection) {
-// 			nextSection.scrollIntoView({ behavior: "smooth" });
-// 		}
-// 	});
-// }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+	const sidebar = document.querySelector(".sidebar");
+	const openBtn = document.querySelector(".filter-icon"); // Кнопка відкриття
+	const closeBtn = document.querySelector(".sidebar__close-btn"); // Кнопка закриття
 
+	if (!sidebar || !openBtn || !closeBtn) return; // Переконуємося, що всі елементи існують
 
+	function toggleSidebar() {
+		const isVisible = sidebar.classList.toggle("visible");
+		sidebar.style.pointerEvents = isVisible ? "all" : "none";
+	}
+
+	// Додаємо події до обох кнопок
+	openBtn.addEventListener("click", function (event) {
+		event.stopPropagation();
+		toggleSidebar();
+	});
+
+	closeBtn.addEventListener("click", function (event) {
+		event.stopPropagation();
+		toggleSidebar();
+	});
+
+	// Закриття при кліку поза сайдбаром (на мобільних)
+	document.addEventListener("click", function (event) {
+		if (window.innerWidth <= 991.98 &&
+			sidebar.classList.contains("visible") &&
+			!sidebar.contains(event.target) &&
+			!openBtn.contains(event.target)) {
+			toggleSidebar();
+		}
+	});
+});
 
