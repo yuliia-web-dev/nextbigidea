@@ -470,7 +470,7 @@ body.menu-open {
   text-align: center;
 }
 .category__title:not(:last-child) {
-  margin-bottom: 1.875rem;
+  margin-bottom: 3.125rem;
 }
 .sidebar {
   padding: 1.25rem 0.9375rem;
@@ -483,7 +483,7 @@ body.menu-open {
   height: fit-content;
   background-color: #fff;
   position: absolute;
-  top: 9.375rem;
+  top: 11.25rem;
   right: 0rem;
   z-index: 50;
   overflow-y: auto;
