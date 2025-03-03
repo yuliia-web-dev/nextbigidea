@@ -454,16 +454,6 @@ body.menu-open {
           align-items: center;
   gap: 1.875rem;
 }
-@media (min-width: 61.99875em) {
-  .category__wrapper {
-    margin-right: 12.5rem;
-  }
-}
-@media (max-width: 61.99875em) {
-  .category__wrapper {
-    margin-left: 0;
-  }
-}
 .category__title {
   font-size: 2.1875rem;
   font-weight: 600;
@@ -472,91 +462,6 @@ body.menu-open {
 .category__title:not(:last-child) {
   margin-bottom: 3.125rem;
 }
-.sidebar {
-  padding: 1.25rem 0.9375rem;
-  padding-right: 3.125rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: #fff;
-  position: absolute;
-  top: 11.25rem;
-  right: 0rem;
-  z-index: 50;
-  overflow-y: auto;
-  pointer-events: all;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-transform: translateX(-150%);
-      -ms-transform: translateX(-150%);
-          transform: translateX(-150%);
-  pointer-events: all;
-}
-.sidebar.visible {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-}
-@media (min-width: 61.99875em) {
-  .sidebar {
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-@media (max-width: 61.99875em) {
-  .sidebar {
-    -webkit-transform: translateX(150%);
-        -ms-transform: translateX(150%);
-            transform: translateX(150%);
-    -webkit-box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.25);
-            box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.25);
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-.sidebar__close-btn img {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-@media (min-width: 61.99875em) {
-  .sidebar__close-btn {
-    display: none;
-  }
-}
-.sidebar__close-btn:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-
-.item-sidebar__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.25rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-.item-sidebar__link {
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-}
-.item-sidebar__link.active {
-  color: var(--accent-color);
-}
-@media (any-hover: hover) {
-  .item-sidebar__link:hover {
-    color: var(--accent-color);
-  }
-}
-
 .item-category {
   overflow: hidden;
   max-width: 47.5rem;
