@@ -1,0 +1,236 @@
+@use "sass:math";
+
+// Кольори
+
+// Функції
+@import "_functions.scss";
+// Шрифти
+@import "_fonts.scss";
+// Іконки
+@import "_icons.scss";
+// Обнулення
+@import "_reset.scss";
+// Компоненти
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1170;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+html {
+	scroll-behavior: smooth;
+}
+body {
+	&.menu-open {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+.wrapper {
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	main {
+		flex-grow: 1;
+	}
+}
+
+[class*="__container"] {
+	margin: 0 auto;
+	padding: 0 toRem(15);
+}
+
+.header {
+	@include adaptiveValue("padding-top", 25, 10);
+	@include adaptiveValue("padding-bottom", 25, 10);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 55;
+	transition: all 0.3s ease;
+	&.scrolled {
+		background-color: rgba(209, 219, 217, 0.775);
+		padding-top: toRem(10);
+		padding-bottom: toRem(10);
+	}
+	// .header__container
+
+	&__container {
+		max-width: toRem(1640);
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 100, 30, $widthTo: 800);
+		justify-content: space-between;
+	}
+
+	// .header__logo
+
+	&__logo {
+		z-index: 20;
+		display: flex;
+		align-items: center;
+		flex: 1;
+		svg {
+			@include adaptiveValue("width", 199, 90);
+			height: auto;
+		}
+	}
+
+	// .header__link
+
+	&__link {
+	}
+
+	&__menu {
+	}
+}
+
+.menu {
+	// .menu__body
+
+	&__body {
+		@media (max-width: toEm(780)) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			top: 0;
+			overflow: auto;
+			padding: toRem(150) toRem(15) toRem(15) toRem(15);
+			background: #000;
+			transition: left 0.3s;
+			z-index: 5;
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				@include adaptiveValue("height", 76, 47, $widthFrom: 767.98);
+				top: 0;
+				left: -100%;
+				z-index: 6;
+				transition: left 0.3s;
+				background: #2b2b2b;
+			}
+			.menu-open & {
+				left: 0;
+
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		@include adaptiveValue("column-gap", 48, 15);
+		row-gap: toRem(5);
+
+		@media (max-width: toEm(780)) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: right;
+			row-gap: toRem(28);
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+		@media (any-hover: hover) {
+			&:hover {
+				.menu__link {
+					color: #8be5e3;
+				}
+				.menu__link::before {
+					transform: scaleX(1);
+					transform-origin: bottom left;
+				}
+			}
+		}
+	}
+	// .menu__link
+
+	&__link {
+		position: relative;
+		font-size: toRem(18);
+		line-height: toRem(24);
+		color: #fff;
+		transition: color 0.3s;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: toRem(-5);
+			width: 100%;
+			height: toRem(3);
+			background: linear-gradient(90deg, transparent, #4cb099, transparent);
+			transform: scaleX(0);
+			transform-origin: bottom right;
+			transition: transform 0.3s ease-out;
+		}
+		@media (max-width: toEm(780)) {
+			font-size: toRem(28);
+		}
+	}
+}
+
+.icon-menu {
+	z-index: 20;
+	display: none;
+	@media (max-width: toEm(780)) {
+		position: relative;
+		width: toRem(30);
+		height: toRem(24);
+		background: none;
+		border: none;
+		appearance: none;
+		display: inline-block;
+		transition: all 0.4s;
+		box-sizing: border-box;
+
+		span {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: toRem(4);
+			background-color: #fff;
+			border-radius: 4px;
+			display: inline-block;
+			transition: all 0.4s;
+		}
+	}
+}
+.icon-menu span:nth-of-type(1) {
+	top: 0;
+}
+.icon-menu span:nth-of-type(2) {
+	top: 10px;
+}
+.icon-menu span:nth-of-type(3) {
+	bottom: 0;
+}
+@media (max-width: toEm(780)) {
+	#menu02.active span:nth-of-type(1) {
+		transform: translateY(10px) rotate(-315deg);
+	}
+	#menu02.active span:nth-of-type(2) {
+		opacity: 0;
+	}
+	#menu02.active span:nth-of-type(3) {
+		transform: translateY(-10px) rotate(315deg);
+	}
+}
