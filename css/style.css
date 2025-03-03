@@ -490,7 +490,7 @@ body.menu-open {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 25em) {
+@media (max-width: 35.625em) {
   .bottom-footer__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -506,6 +506,17 @@ body.menu-open {
   display: -ms-flexbox;
   display: flex;
   gap: 1.25rem;
+}
+@media (max-width: 25em) {
+  .bottom-footer__privacy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .bottom-footer__privacy a {
   -webkit-transition: color 0.3s;

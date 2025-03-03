@@ -249,7 +249,7 @@ body {
 	background-position: right;
 	position: relative;
 	background-color: rgba(222, 238, 249, 0.3);
-	@media(max-width: toEm(1100)){
+	@media (max-width: toEm(1100)) {
 		background-image: none;
 	}
 	// .hero__container
@@ -379,7 +379,7 @@ body {
 		gap: toRem(20);
 		display: flex;
 		justify-content: space-between;
-		@media (max-width: toEm(400)) {
+		@media (max-width: toEm(570)) {
 			flex-direction: column-reverse;
 			align-items: center;
 		}
@@ -395,6 +395,10 @@ body {
 	&__privacy {
 		display: flex;
 		gap: toRem(20);
+		@media (max-width: toEm(400)) {
+			flex-direction: column;
+			align-items: center;
+		}
 		a {
 			transition: color 0.3s;
 			@media (any-hover: hover) {
