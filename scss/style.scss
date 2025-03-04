@@ -112,7 +112,7 @@ body {
 //=========================HERO=================
 
 .hero {
-	@include adaptiveValue("margin-top", 90, 60);
+	@include adaptiveValue("margin-top", 90, 48);
 	padding-top: toRem(90);
 	padding-bottom: toRem(90);
 	background-image: url("../img/hero-bg.png");

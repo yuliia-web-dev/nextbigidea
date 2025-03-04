@@ -299,20 +299,20 @@ body.menu-open {
   }
 }
 @media (min-width: 20em) and (max-width: 101.875em) {
-  @supports (margin-top: clamp( 3.75rem , 3.2919847328rem  +  2.2900763359vw , 5.625rem )) {
+  @supports (margin-top: clamp( 3rem , 2.358778626rem  +  3.2061068702vw , 5.625rem )) {
     .hero {
-      margin-top: clamp( 3.75rem , 3.2919847328rem  +  2.2900763359vw , 5.625rem );
+      margin-top: clamp( 3rem , 2.358778626rem  +  3.2061068702vw , 5.625rem );
     }
   }
-  @supports not (margin-top: clamp( 3.75rem , 3.2919847328rem  +  2.2900763359vw , 5.625rem )) {
+  @supports not (margin-top: clamp( 3rem , 2.358778626rem  +  3.2061068702vw , 5.625rem )) {
     .hero {
-      margin-top: calc(3.75rem + 1.875 * (100vw - 20rem) / 81.875);
+      margin-top: calc(3rem + 2.625 * (100vw - 20rem) / 81.875);
     }
   }
 }
 @media (max-width: 20em) {
   .hero {
-    margin-top: 3.75rem;
+    margin-top: 3rem;
   }
 }
 @media (max-width: 60em) {
