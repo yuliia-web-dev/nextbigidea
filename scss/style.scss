@@ -279,9 +279,7 @@ body {
 			width: toRem(150);
 			height: toRem(40);
 			object-fit: contain;
-			@media (max-width: toEm(480)) {
-				width: 100%;
-			}
+		
 		}
 	}
 }
