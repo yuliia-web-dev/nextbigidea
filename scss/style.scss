@@ -236,7 +236,7 @@ body {
 }
 //===================COMPANIES=========================
 .companies {
-	padding: toRem(50);
+	padding: toRem(50) 0;
 
 	// .companies__container
 
@@ -267,13 +267,17 @@ body {
 		flex-wrap: wrap;
 		gap: toRem(20);
 		justify-content: space-around;
-		@media (max-width: toEm(400)) {
+		@media (max-width: toEm(480)) {
 			justify-content: center;
+			max-width: 100%;
 		}
 		img {
 			width: toRem(120);
 			height: toRem(40);
 			object-fit: contain;
+				@media (max-width: toEm(480)) {
+		width: 100%;
+		}
 		}
 	}
 }
