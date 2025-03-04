@@ -264,8 +264,18 @@ body.menu-open {
   display: flex;
   gap: 1.25rem;
 }
+@media (max-width: 30em) {
+  .header__buttons-wrap {
+    gap: 0.625rem;
+  }
+}
 .header__button {
   padding: 0.625rem 1.25rem;
+}
+@media (max-width: 30em) {
+  .header__button {
+    padding: 0.3125rem 0.375rem;
+  }
 }
 .hero {
   padding-top: 3.75rem;
@@ -439,24 +449,24 @@ body.menu-open {
 }
 @media (min-width: 101.875em) {
   .button {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 101.875em) {
-  @supports (font-size: clamp( 1.125rem , 1.0944656489rem  +  0.1526717557vw , 1.25rem )) {
+  @supports (font-size: clamp( 1rem , 0.9694656489rem  +  0.1526717557vw , 1.125rem )) {
     .button {
-      font-size: clamp( 1.125rem , 1.0944656489rem  +  0.1526717557vw , 1.25rem );
+      font-size: clamp( 1rem , 0.9694656489rem  +  0.1526717557vw , 1.125rem );
     }
   }
-  @supports not (font-size: clamp( 1.125rem , 1.0944656489rem  +  0.1526717557vw , 1.25rem )) {
+  @supports not (font-size: clamp( 1rem , 0.9694656489rem  +  0.1526717557vw , 1.125rem )) {
     .button {
-      font-size: calc(1.125rem + 0.125 * (100vw - 20rem) / 81.875);
+      font-size: calc(1rem + 0.125 * (100vw - 20rem) / 81.875);
     }
   }
 }
 @media (max-width: 20em) {
   .button {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 .button--transparent {
@@ -592,6 +602,7 @@ body.menu-open {
   font-weight: 600;
   text-align: center;
   line-height: 1.2;
+  text-transform: capitalize;
 }
 .category__title:not(:last-child) {
   margin-bottom: 3.125rem;
@@ -600,6 +611,7 @@ body.menu-open {
   overflow: hidden;
   max-width: 47.5rem;
   width: 100%;
+  height: auto;
   font-size: 1.2rem;
   padding: 1.25rem 1.5625rem;
   border-radius: 0.5rem;
@@ -610,6 +622,14 @@ body.menu-open {
   display: flex;
   gap: 1.25rem;
   position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media (any-hover: hover) {
+  .item-category:hover {
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
 }
 @media (max-width: 30em) {
   .item-category {

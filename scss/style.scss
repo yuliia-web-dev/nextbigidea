@@ -94,9 +94,15 @@ body {
 	&__buttons-wrap {
 		display: flex;
 		gap: toRem(20);
+		@media (max-width: toEm(480)) {
+			gap: toRem(10);
+		}
 	}
 	&__button {
 		padding: toRem(10) toRem(20);
+		@media (max-width: toEm(480)) {
+			padding: toRem(5) toRem(6);
+		}
 	}
 	&__menu {
 	}
@@ -305,7 +311,7 @@ body {
 	}
 }
 .button {
-	@include adaptiveValue("font-size", 20, 18);
+	@include adaptiveValue("font-size", 18, 16);
 	border-radius: toRem(6);
 	transition: all 0.3s;
 	&--transparent {
@@ -385,16 +391,6 @@ body {
 	&__container {
 	}
 
-	// .category__wrap
-
-	&__wrap {
-	}
-
-	// .category__sidebar
-
-	&__sidebar {
-	}
-
 	// .category__wrapper
 
 	&__wrapper {
@@ -410,6 +406,8 @@ body {
 		font-weight: 600;
 		text-align: center;
 		line-height: 1.2;
+						text-transform: capitalize;
+
 		&:not(:last-child) {
 			margin-bottom: toRem(50);
 		}
@@ -422,6 +420,7 @@ body {
 	overflow: hidden;
 	max-width: toRem(760);
 	width: 100%;
+	height: auto;
 	font-size: 1.2rem;
 	padding: toRem(20) toRem(25);
 	border-radius: toRem(8);
@@ -430,6 +429,12 @@ body {
 	display: flex;
 	gap: toRem(20);
 	position: relative;
+	transition: all 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+		}
+	}
 	@media (max-width: toEm(480)) {
 		padding: toRem(15);
 		flex-direction: column;
