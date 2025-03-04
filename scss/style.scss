@@ -575,8 +575,7 @@ body {
 	// .footer__logo
 
 	&__logo {
-		font-size: toRem(30);
-		font-weight: 600;
+		@extend .header__logo;
 	}
 
 	// .footer__social

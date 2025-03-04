@@ -247,7 +247,7 @@ body.menu-open {
     gap: 1.875rem;
   }
 }
-.header__logo {
+.header__logo, .footer__logo {
   font-weight: 600;
   z-index: 20;
   -webkit-box-align: center;
@@ -255,7 +255,7 @@ body.menu-open {
           align-items: center;
   max-width: 12.5rem;
 }
-.header__logo img {
+.header__logo img, .footer__logo img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -676,10 +676,6 @@ body.menu-open {
             align-items: center;
     gap: 2.5rem;
   }
-}
-.footer__logo {
-  font-size: 1.875rem;
-  font-weight: 600;
 }
 .social {
   display: -webkit-box;
