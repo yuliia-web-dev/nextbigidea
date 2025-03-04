@@ -735,8 +735,8 @@ body.menu-open {
 }
 @media (any-hover: hover) {
   .item-category:hover {
-    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 }
 .item-category.visible {
