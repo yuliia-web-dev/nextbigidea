@@ -318,8 +318,10 @@ body {
 		}
 	}
 	&__text {
+		color: #4d5154;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: 1.4;
 		text-align: center;
-		@extend .hero__text;
 		&:not(:last-child) {
 			margin-bottom: toRem(60);
 		}
