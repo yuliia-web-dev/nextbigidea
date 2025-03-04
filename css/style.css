@@ -209,7 +209,7 @@ body.menu-open {
 }
 .header.scrolled {
   background-color: #fff;
-  border-bottom: 0.0625rem solid var(--accent-color);
+  border-bottom: 0.0625rem solid rgba(221, 82, 32, 0.434);
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
@@ -596,12 +596,22 @@ body.menu-open {
 }
 @media (max-width: 43.125em) {
   .item-category__list {
+    padding-bottom: 0.9375rem;
     overflow-x: auto;
     -ms-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
-    scrollbar-width: thin; /* Залиште лише одну властивість */
+    scrollbar-width: thin;
     scrollbar-color: rgba(209, 91, 52, 0.3) rgba(255, 255, 255, 0.777);
-    padding-top: 0.9375rem;
+  }
+  .item-category__list::-webkit-scrollbar {
+    height: 6px; /* Тонкий скролбар */
+  }
+  .item-category__list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.777);
+  }
+  .item-category__list::-webkit-scrollbar-thumb {
+    background: rgba(209, 91, 52, 0.3);
+    border-radius: 3px;
   }
 }
 .item-category__item {
@@ -628,8 +638,11 @@ body.menu-open {
   background-color: #ffd500;
 }
 
+.footer {
+  border-top: 0.0625rem solid rgba(77, 81, 84, 0.2392156863);
+}
 .footer__top {
-  padding: 1.25rem;
+  padding: 1.875rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

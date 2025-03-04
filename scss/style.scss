@@ -64,7 +64,7 @@ body {
 	background-color: #fff;
 	&.scrolled {
 		background-color: #fff;
-		border-bottom: toRem(1) solid var(--accent-color);
+		border-bottom: toRem(1) solid rgba(221, 82, 32, 0.434);
 		padding-top: toRem(10);
 		padding-bottom: toRem(10);
 	}
@@ -348,7 +348,7 @@ body {
 		@media (max-width: toEm(400)) {
 			justify-content: center;
 		}
-		img{
+		img {
 			width: toRem(120);
 			height: toRem(40);
 			object-fit: contain;
@@ -492,11 +492,21 @@ body {
 		gap: toRem(15);
 		overflow: hidden;
 		@media (max-width: toEm(690)) {
+			padding-bottom: toRem(15);
 			overflow-x: auto;
 			scroll-snap-type: x mandatory;
-			scrollbar-width: thin; /* Залиште лише одну властивість */
+			scrollbar-width: thin;
 			scrollbar-color: rgba(209, 91, 52, 0.3) rgba(255, 255, 255, 0.777);
-			padding-top: toRem(15);
+			&::-webkit-scrollbar {
+				height: 6px; /* Тонкий скролбар */
+			}
+			&::-webkit-scrollbar-track {
+				background: rgba(255, 255, 255, 0.777);
+			}
+			&::-webkit-scrollbar-thumb {
+				background: rgba(209, 91, 52, 0.3);
+				border-radius: 3px;
+			}
 		}
 	}
 
@@ -527,6 +537,8 @@ body {
 //=====================FOOTER=============================
 
 .footer {
+			border-top: toRem(1) solid #4d51543d;
+
 	// .footer__container
 
 	&__container {
@@ -535,7 +547,7 @@ body {
 	// .footer__top
 
 	&__top {
-		padding: toRem(20);
+		padding: toRem(30) toRem(0);
 		display: flex;
 		gap: toRem(20);
 		justify-content: space-between;
