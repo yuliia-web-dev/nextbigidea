@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700&display=swap");
 :root {
-  --accent-color: #f03e3e;
+  --accent-color: #3e97f0;
 }
 
 @font-face {
@@ -248,12 +248,18 @@ body.menu-open {
   }
 }
 .header__logo {
-  font-size: 1.875rem;
   font-weight: 600;
   z-index: 20;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 12.5rem;
+}
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .header__buttons-wrap {
   display: -webkit-box;
@@ -268,7 +274,7 @@ body.menu-open {
   margin-top: 5.625rem;
   padding-top: 3.75rem;
   padding-bottom: 3.75rem;
-  background-image: url("../img/hero-bg.svg");
+  background-image: url("../img/hero-bg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -519,6 +525,10 @@ body.menu-open {
 @media (max-width: 30em) {
   .item-category {
     padding: 0.9375rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .item-category--background {
@@ -549,13 +559,6 @@ body.menu-open {
 }
 .item-category__header {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 0.9375rem;
 }
 .item-category__details {
   position: absolute;
@@ -575,11 +578,22 @@ body.menu-open {
   font-weight: 600;
   color: #000;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 70%;
 }
 .item-category__date {
   font-size: 0.9rem;
   line-height: 1.4em;
   color: #4d5154;
+}
+.item-category__date--new {
+  padding: 0.1875rem 0.375rem;
+  background-color: #ffd500;
+  font-weight: 600;
+  border-radius: 0.1875rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
 }
 .item-category__pin {
   width: 1.125rem;
@@ -660,6 +674,7 @@ body.menu-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 2.5rem;
   }
 }
 .footer__logo {
@@ -706,6 +721,7 @@ body.menu-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    font-size: 0.875rem;
   }
 }
 .bottom-footer__privacy {

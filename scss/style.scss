@@ -2,7 +2,7 @@
 
 // Кольори
 :root {
-	--accent-color: #f03e3e;
+	--accent-color: #3e97f0;
 }
 // Функції
 @import "_functions.scss";
@@ -81,10 +81,16 @@ body {
 	// .header__logo
 
 	&__logo {
-		font-size: toRem(30);
 		font-weight: 600;
 		z-index: 20;
 		align-items: center;
+		max-width: toRem(200);
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		
 	}
 
 	&__buttons-wrap {
@@ -245,7 +251,7 @@ body {
 	margin-top: toRem(90);
 	padding-top: toRem(60);
 	padding-bottom: toRem(60);
-	background-image: url("../img/hero-bg.svg");
+	background-image: url("../img/hero-bg.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: right;
@@ -413,6 +419,7 @@ body {
 	position: relative;
 	@media (max-width: toEm(480)) {
 		padding: toRem(15);
+		flex-direction: column;
 	}
 	&--background {
 		border-left: 8px solid #ffd500;
@@ -445,10 +452,6 @@ body {
 
 	&__header {
 		width: 100%;
-
-		display: flex;
-		justify-content: space-between;
-		gap: toRem(15);
 	}
 	&__details {
 		position: absolute;
@@ -466,6 +469,9 @@ body {
 		font-weight: 600;
 		color: #000;
 		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		max-width: 70%;
 	}
 
 	// .item-category__date
@@ -474,6 +480,14 @@ body {
 		font-size: 0.9rem;
 		line-height: 1.4em;
 		color: #4d5154;
+		&--new{
+			padding: toRem(3) toRem(6);
+			background-color: #ffd500;
+			font-weight: 600;
+			border-radius: toRem(3);
+			text-transform: uppercase;
+			font-size: 0.75rem;
+		}
 	}
 
 	// .item-category__pin
@@ -537,7 +551,7 @@ body {
 //=====================FOOTER=============================
 
 .footer {
-			border-top: toRem(1) solid #4d51543d;
+	border-top: toRem(1) solid #4d51543d;
 
 	// .footer__container
 
@@ -554,6 +568,7 @@ body {
 		@media (max-width: toEm(480)) {
 			flex-direction: column;
 			align-items: center;
+			gap: toRem(40);
 		}
 	}
 
@@ -602,6 +617,7 @@ body {
 		@media (max-width: toEm(570)) {
 			flex-direction: column-reverse;
 			align-items: center;
+			font-size: toRem(14);
 		}
 	}
 
