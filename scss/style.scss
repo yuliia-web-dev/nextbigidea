@@ -287,6 +287,8 @@ body {
 		font-weight: 600;
 		animation: show 0.8s ease-in-out forwards;
 		transform: translateY(-30px);
+		transition: all 0.3s;
+
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 30, 20);
 		}
@@ -301,10 +303,10 @@ body {
 		@include adaptiveValue("font-size", 20, 18);
 		line-height: 1.4;
 		animation: show 0.8s ease-in-out forwards;
-		animation-delay: 0.3s;
+		animation-delay: 0.5s;
 		opacity: 0;
+		transition: all 0.3s;
 		transform: translateY(-30px);
-
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 30, 20);
 		}
@@ -315,10 +317,11 @@ body {
 	&__button {
 		padding: toRem(20) toRem(10);
 		width: fit-content;
-		animation: scale 0.8s ease-in-out forwards;
-		animation-delay: 0.6s;
+		animation: scale 0.8s ease-out forwards;
+		animation-delay: 1s;
 		transform: translateY(-30px);
 		opacity: 0;
+		transition: all 0.3s;
 		transform: scale(0.8);
 	}
 }
