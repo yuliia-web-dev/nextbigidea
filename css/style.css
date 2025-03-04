@@ -351,11 +351,12 @@ body.menu-open {
 .hero__title {
   line-height: 1.2;
   font-weight: 600;
-  -webkit-animation: show 0.8s ease-in-out forwards;
-          animation: show 0.8s ease-in-out forwards;
+  -webkit-animation: show 0.8s ease-out forwards;
+          animation: show 0.8s ease-out forwards;
   -webkit-transform: translateY(-30px);
       -ms-transform: translateY(-30px);
           transform: translateY(-30px);
+  will-change: transform;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -409,8 +410,8 @@ body.menu-open {
 .hero__text {
   color: #4d5154;
   line-height: 1.4;
-  -webkit-animation: show 0.8s ease-in-out forwards;
-          animation: show 0.8s ease-in-out forwards;
+  -webkit-animation: show 0.8s ease-out forwards;
+          animation: show 0.8s ease-out forwards;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   opacity: 0;
@@ -419,6 +420,7 @@ body.menu-open {
   -webkit-transform: translateY(-30px);
       -ms-transform: translateY(-30px);
           transform: translateY(-30px);
+  will-change: transform;
 }
 @media (min-width: 101.875em) {
   .hero__text {
@@ -469,6 +471,7 @@ body.menu-open {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  will-change: transform;
   -webkit-animation: scale 0.8s ease-out forwards;
           animation: scale 0.8s ease-out forwards;
   -webkit-animation-delay: 1s;
@@ -477,6 +480,7 @@ body.menu-open {
       -ms-transform: translateY(-30px);
           transform: translateY(-30px);
   opacity: 0;
+  will-change: transform;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-transform: scale(0.8);

@@ -149,8 +149,9 @@ body {
 		line-height: 1.2;
 		@include adaptiveValue("font-size", 60, 35);
 		font-weight: 600;
-		animation: show 0.8s ease-in-out forwards;
+		animation: show 0.8s ease-out forwards;
 		transform: translateY(-30px);
+		will-change: transform;
 		transition: all 0.3s;
 
 		&:not(:last-child) {
@@ -166,11 +167,12 @@ body {
 		color: #4d5154;
 		@include adaptiveValue("font-size", 20, 18);
 		line-height: 1.4;
-		animation: show 0.8s ease-in-out forwards;
+		animation: show 0.8s ease-out forwards;
 		animation-delay: 0.5s;
 		opacity: 0;
 		transition: all 0.3s;
 		transform: translateY(-30px);
+		will-change: transform;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 30, 20);
 		}
@@ -181,10 +183,12 @@ body {
 	&__button {
 		padding: toRem(20) toRem(10);
 		width: fit-content;
+		will-change: transform;
 		animation: scale 0.8s ease-out forwards;
 		animation-delay: 1s;
 		transform: translateY(-30px);
 		opacity: 0;
+		will-change: transform;
 		transition: all 0.3s;
 		transform: scale(0.8);
 	}
