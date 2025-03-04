@@ -726,10 +726,10 @@ body.menu-open {
 }
 
 .item-category {
-  overflow: hidden;
   max-width: 47.5rem;
   width: 100%;
   height: auto;
+  overflow: hidden;
   font-size: 1.2rem;
   padding: 1.25rem 1.5625rem;
   border-radius: 0.5rem;
@@ -759,7 +759,7 @@ body.menu-open {
   }
 }
 .item-category--background {
-  border-left: 8px solid #ffd500;
+  border-left: 0.5rem solid #ffd500;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   background-color: #fff7d7;
@@ -806,7 +806,6 @@ body.menu-open {
   color: #000;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
   max-width: 70%;
 }
 .item-category__date {
@@ -830,36 +829,28 @@ body.menu-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 100%;
-  width: 100%;
-  gap: 0.9375rem;
-  overflow: hidden;
+  gap: 0.625rem;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(209, 91, 52, 0.3) rgba(255, 255, 255, 0.777);
+  padding-bottom: 0.9375rem;
 }
-@media (max-width: 43.125em) {
-  .item-category__list {
-    padding-bottom: 0.9375rem;
-    overflow-x: auto;
-    -ms-scroll-snap-type: x mandatory;
-        scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(209, 91, 52, 0.3) rgba(255, 255, 255, 0.777);
-  }
-  .item-category__list::-webkit-scrollbar {
-    height: 6px;
-  }
-  .item-category__list::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.777);
-  }
-  .item-category__list::-webkit-scrollbar-thumb {
-    background: rgba(209, 91, 52, 0.3);
-    border-radius: 3px;
-  }
+.item-category__list::-webkit-scrollbar {
+  height: 6px;
+}
+.item-category__list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.777);
+}
+.item-category__list::-webkit-scrollbar-thumb {
+  background: rgba(209, 91, 52, 0.3);
+  border-radius: 3px;
 }
 .item-category__item {
-  width: 7.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   white-space: nowrap;
   font-size: 0.9rem;
   -ms-flex-negative: 0;
@@ -871,6 +862,14 @@ body.menu-open {
   border-radius: 0.25rem;
   background-color: #fff;
   border: 0.0625rem solid #ddd;
+}
+.item-category__item:last-child {
+  margin-right: 3.125rem;
+}
+@media (max-width: 30em) {
+  .item-category__item:last-child {
+    margin-right: 0;
+  }
 }
 .item-category__item.active {
   background-color: #ffd500;

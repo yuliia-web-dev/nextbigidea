@@ -279,9 +279,9 @@ body {
 			width: toRem(120);
 			height: toRem(40);
 			object-fit: contain;
-				@media (max-width: toEm(480)) {
-		width: 100%;
-		}
+			@media (max-width: toEm(480)) {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -331,10 +331,10 @@ body {
 }
 
 .item-category {
-	overflow: hidden;
 	max-width: toRem(760);
 	width: 100%;
 	height: auto;
+	overflow: hidden;
 	font-size: 1.2rem;
 	padding: toRem(20) toRem(25);
 	border-radius: toRem(8);
@@ -354,7 +354,7 @@ body {
 		flex-direction: column;
 	}
 	&--background {
-		border-left: 8px solid #ffd500;
+		border-left: toRem(8) solid #ffd500;
 		border-top-left-radius: toRem(8);
 		border-bottom-left-radius: toRem(8);
 		background-color: #fff7d7;
@@ -402,7 +402,6 @@ body {
 		color: #000;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		overflow: hidden;
 		max-width: 70%;
 	}
 
@@ -433,34 +432,31 @@ body {
 
 	&__list {
 		display: flex;
-		max-width: 100%;
-		width: 100%;
-		gap: toRem(15);
-		overflow: hidden;
+		gap: toRem(10);
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: thin;
+		scrollbar-color: rgba(209, 91, 52, 0.3) rgba(255, 255, 255, 0.777);
+		padding-bottom: toRem(15);
+
+		&::-webkit-scrollbar {
+			height: 6px;
+		}
+		&::-webkit-scrollbar-track {
+			background: rgba(255, 255, 255, 0.777);
+		}
+		&::-webkit-scrollbar-thumb {
+			background: rgba(209, 91, 52, 0.3);
+			border-radius: 3px;
+		}
 		@media (max-width: toEm(690)) {
-			padding-bottom: toRem(15);
-			overflow-x: auto;
-			scroll-snap-type: x mandatory;
-			scrollbar-width: thin;
-			scrollbar-color: rgba(209, 91, 52, 0.3) rgba(255, 255, 255, 0.777);
-			&::-webkit-scrollbar {
-				height: 6px;
-			}
-			&::-webkit-scrollbar-track {
-				background: rgba(255, 255, 255, 0.777);
-			}
-			&::-webkit-scrollbar-thumb {
-				background: rgba(209, 91, 52, 0.3);
-				border-radius: 3px;
-			}
 		}
 	}
 
 	// .item-category__item
 
 	&__item {
-		width: toRem(120);
-		width: fit-content;
+		flex: 0 0 auto;
 		white-space: nowrap;
 		font-size: 0.9rem;
 		flex-shrink: 0;
@@ -471,6 +467,12 @@ body {
 		border-radius: toRem(4);
 		background-color: #fff;
 		border: toRem(1) solid #ddd;
+		&:last-child {
+			margin-right: toRem(50);
+			@media (max-width: toEm(480)) {
+				margin-right: 0;
+			}
+		}
 		&.active {
 			background-color: #ffd500;
 		}

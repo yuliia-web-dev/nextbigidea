@@ -33,3 +33,4 @@ const observeElements = (selectors, options = { threshold: 0.3, unobserve: true 
 };
 
 observeElements('.category__item');
+
