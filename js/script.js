@@ -32,5 +32,5 @@ const observeElements = (selectors, options = { threshold: 0.3, unobserve: true 
 	elements.forEach(el => observer.observe(el));
 };
 
-observeElements('.category__item');
+observeElements('.item-category');
 
