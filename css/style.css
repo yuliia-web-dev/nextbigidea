@@ -248,11 +248,9 @@ body.menu-open {
   }
 }
 .header__logo, .footer__logo {
-  font-weight: 600;
   z-index: 20;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   max-width: 12.5rem;
 }
 .header__logo img, .footer__logo img {
@@ -271,7 +269,6 @@ body.menu-open {
   padding: 0.625rem 1.25rem;
 }
 .hero {
-  margin-top: 5.625rem;
   padding-top: 3.75rem;
   padding-bottom: 3.75rem;
   background-image: url("../img/hero-bg.png");
@@ -281,7 +278,29 @@ body.menu-open {
   position: relative;
   background-color: rgba(222, 238, 249, 0.3);
 }
-@media (max-width: 68.75em) {
+@media (min-width: 101.875em) {
+  .hero {
+    margin-top: 5.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 101.875em) {
+  @supports (margin-top: clamp( 3.75rem , 3.2919847328rem  +  2.2900763359vw , 5.625rem )) {
+    .hero {
+      margin-top: clamp( 3.75rem , 3.2919847328rem  +  2.2900763359vw , 5.625rem );
+    }
+  }
+  @supports not (margin-top: clamp( 3.75rem , 3.2919847328rem  +  2.2900763359vw , 5.625rem )) {
+    .hero {
+      margin-top: calc(3.75rem + 1.875 * (100vw - 20rem) / 81.875);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .hero {
+    margin-top: 3.75rem;
+  }
+}
+@media (max-width: 60em) {
   .hero {
     background-image: none;
   }

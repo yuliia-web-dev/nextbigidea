@@ -81,9 +81,8 @@ body {
 	// .header__logo
 
 	&__logo {
-		font-weight: 600;
 		z-index: 20;
-		align-items: center;
+		flex-shrink: 0;
 		max-width: toRem(200);
 			img{
 				width: 100%;
@@ -248,7 +247,7 @@ body {
 //=========================HERO=================
 
 .hero {
-	margin-top: toRem(90);
+	@include adaptiveValue("margin-top",90,60);
 	padding-top: toRem(60);
 	padding-bottom: toRem(60);
 	background-image: url("../img/hero-bg.png");
@@ -257,7 +256,7 @@ body {
 	background-position: right;
 	position: relative;
 	background-color: rgba(222, 238, 249, 0.3);
-	@media (max-width: toEm(1100)) {
+	@media (max-width: toEm(960)) {
 		background-image: none;
 	}
 	// .hero__container
