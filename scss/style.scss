@@ -453,7 +453,7 @@ body {
 		&.visible {
 			transform: translateY(0);
 			opacity: 1;
-			transition: transform 0.3s;
+			transition: transform 0.5s;
 		}
 	}
 }
