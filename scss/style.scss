@@ -36,6 +36,10 @@ body {
 		overscroll-behavior: none;
 	}
 }
+body.lock {
+	overflow: hidden;
+	touch-action: none;
+}
 .wrapper {
 	overflow: clip;
 	display: flex;
@@ -58,7 +62,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 100vw;
 	z-index: 55;
 	transition: all 0.3s ease;
 	background-color: #fff;
@@ -74,7 +78,7 @@ body {
 		max-width: toRem(1640);
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("gap", 100, 30, $widthTo: 800);
+		@include adaptiveValue("gap", 100, 20, $widthTo: 800);
 		justify-content: space-between;
 	}
 
@@ -84,14 +88,14 @@ body {
 		z-index: 20;
 		flex-shrink: 0;
 		max-width: toRem(200);
-		@media (max-width: toEm(480)) {
-			max-width: toRem(120);
+		height: toRem(30);
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		@media (max-width: toEm(455)) {
+			max-width: toRem(90);
 		}
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
+		
 	}
 
 	&__buttons-wrap {
@@ -102,6 +106,7 @@ body {
 		}
 	}
 	&__button {
+		flex-shrink: 0;
 		padding: toRem(10) toRem(20);
 		@media (max-width: toEm(480)) {
 			padding: toRem(5) toRem(8);
@@ -147,7 +152,7 @@ body {
 
 	&__title {
 		line-height: 1.2;
-		@include adaptiveValue("font-size", 60, 35);
+		@include adaptiveValue("font-size", 60, 30);
 		font-weight: 600;
 		animation: show 0.8s ease-out forwards;
 		transform: translateY(-30px);
@@ -191,6 +196,11 @@ body {
 		will-change: transform;
 		transition: all 0.3s;
 		transform: scale(0.8);
+		@media(max-width: toEm(480)){
+			width: 100%;
+					padding: toRem(10) toRem(15);
+
+		}
 	}
 }
 @keyframes scale {
@@ -214,6 +224,7 @@ body {
 	}
 }
 .button {
+	flex-shrink: 0;
 	@include adaptiveValue("font-size", 18, 16);
 	border-radius: toRem(6);
 	transition: all 0.3s;
@@ -328,10 +339,13 @@ body {
 	}
 	&__item {
 	}
+	&__items-wrap {
+		max-width: toRem(760);
+		width: 100%;
+	}
 }
 
 .item-category {
-	max-width: toRem(760);
 	width: 100%;
 	height: auto;
 	overflow: hidden;
@@ -343,17 +357,11 @@ body {
 	display: flex;
 	gap: toRem(20);
 	position: relative;
-	opacity: 0;
-	transform: translateY(20px);
 	transition: all 0.3s ease-out;
 	@media (any-hover: hover) {
 		&:hover {
 			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 		}
-	}
-	&.visible {
-		transform: translateY(0);
-		opacity: 1;
 	}
 
 	@media (max-width: toEm(480)) {
@@ -485,7 +493,103 @@ body {
 		}
 	}
 }
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #00000049;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+	z-index: 50;
+	&__body {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: toRem(30) toRem(10);
+	}
+	&__content {
+		border-top: toRem(8) solid #ffd500;
+		border-radius: toRem(8);
+		max-width: toRem(700);
+		max-height: toRem(600);
+		background-color: #fff7d7;
+		padding: toRem(40) toRem(20) toRem(20) toRem(20);
+		color: #000;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow-y: auto;
+		@media (max-width: toEm(480)) {
+			padding: toRem(35) toRem(10) toRem(10) toRem(10);
+		}
+	}
+	&__close {
+		position: absolute;
+		top: toRem(5);
+		right: toRem(10);
+		width: toRem(25);
+		height: toRem(25);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			will-change: transform;
+			transition: transform 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+	&__video {
+		max-width: toRem(500);
+		aspect-ratio: 500 / 300;
 
+		video {
+			border-radius: toRem(10);
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	&__description {
+		p {
+			@include adaptiveValue("font-size", 18, 16);
+			line-height: 1.2;
+		}
+		a {
+			@include adaptiveValue("font-size", 20, 18);
+			color: var(--accent-color);
+			font-weight: 500;
+			transition: color 0.3s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #060606;
+				}
+			}
+		}
+	}
+}
+.popup.open {
+	visibility: visible;
+	opacity: 1;
+}
+.popup:not(.open) .popup__close {
+	pointer-events: none;
+	visibility: hidden;
+}
 //=====================FOOTER=============================
 
 .footer {

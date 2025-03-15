@@ -6,17 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Next Big Idea">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<title>Next Big Idea</title>
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper lock-padding">
 		<header class="header">
 			<div class="header__container">
-				<div class="header__logo logo">
-					<img src="img/header-logo.svg" alt="header logo">
-				</div>
-
+				<img class="header__logo logo" src="img/header-logo.svg" alt="header logo">
 				<div class="header__buttons-wrap">
 					<a href="#" class="header__button button button--transparent" data-da=".menu__list,5,400">Sign in
 						<a href="#" class="header__button button button--background" data-da=".menu__list,5,400">Post an idea
@@ -64,546 +62,194 @@
 						</p>
 					</div>
 					<div class="category__wrapper">
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date item-category__date--new">New</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
+						<div class="category__items-wrap">
+							<a href="#popup-1" class="category__item item-category popup-link">
+								<img class="item-category__icon" src="img/project-1.svg" alt="logo">
+								<div class="item-category__info">
+									<div class="item-category__header">
+										<h3 class="item-category__title">WhatsBuy.ai</h3>
+										<div class="item-category__details">
+											<span class="item-category__date item-category__date--new">New</span>
+											<img src="img/pin.svg" alt="pin" class="item-category__pin">
+										</div>
+									</div>
+									<ul class="item-category__list">
+										<li class="item-category__item active">Mobile Apps</li>
+										<li class="item-category__item">SaaS</li>
+										<li class="item-category__item">Web</li>
+										<li class="item-category__item">AI</li>
+										<li class="item-category__item">FinTech</li>
+										<li class="item-category__item">FinTech</li>
+										<li class="item-category__item">FinTech</li>
+									</ul>
+								</div>
+							</a>
+							<div id="popup-1" class="popup">
+								<div class="popup__body">
+									<div class="popup__content">
+										<button aria-label="close popup" class="popup__close close-popup">
+											<img src="img/close-md-svgrepo-com.svg" alt="close">
+										</button>
+										<div class="popup__video video">
+											<video id="videoPlayer" controls>
+												<source src="video/video-bg.mp4" type="video/mp4">
+											</video>
+										</div>
+										<div class="popup__description">
+											<p>
+												<a href="https://whatsbuy.ai" target="_blank">WhatsBuy.ai</a> is an innovative app that automatically scans your
+												WhatsApp messages with
+												selected family members to create
+												organized shopping lists, ensuring you never forget items while shopping. The app
+												integrates seamlessly with your
+												WhatsApp conversations, automatically extracting shopping-related messages from
+												chosen
+												contacts to generate
+												well-organized shopping lists. This minimizes the stress of manual list-making and
+												ensures a more efficient and
+												enjoyable shopping experience.
+											</p>
+										</div>
 									</div>
 								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
 							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
+						</div>
+						<div class="category__items-wrap">
+							<a href="#popup-2" class="category__item item-category item-category--background popup-link">
+								<img class="item-category__icon" src="img/project-2.svg" alt="logo">
+								<div class="item-category__info">
+									<div class="item-category__header">
+										<h3 class="item-category__title">AutoMute.ai</h3>
+										<div class="item-category__details">
+											<span class="item-category__date">2d</span>
+											<img src="img/pin.svg" alt="pin" class="item-category__pin">
+										</div>
+									</div>
+									<ul class="item-category__list">
+										<li class="item-category__item active">Mobile Apps</li>
+										<li class="item-category__item">SaaS</li>
+										<li class="item-category__item">Web</li>
+										<li class="item-category__item">AI</li>
+										<li class="item-category__item">FinTech</li>
+										<li class="item-category__item">FinTech</li>
+										<li class="item-category__item">FinTech</li>
+									</ul>
+								</div>
+							</a>
+							<div id="popup-2" class="popup">
+								<div class="popup__body">
+									<div class="popup__content">
+										<button aria-label="close popup" class="popup__close close-popup">
+											<img src="img/close-md-svgrepo-com.svg" alt="close">
+										</button>
+										<div class="popup__video video">
+											<video id="videoPlayer" controls>
+												<source src="video/video-bg.mp4" type="video/mp4">
+											</video>
+										</div>
+										<div class="popup__description">
+											<p>
+												<a href="#" target="_blank">AutoMute.ai</a> is a Chrome extension and mobile app that automatically
+												mutes your
+												computer's and mobile's sound when it
+												detects adult content, helping you browse discreetly and avoid unexpected loud
+												noises, especially in shared spaces.
+												Unlike other tools that block adult content, AutoMute.ai focuses on reducing
+												potential stress and embarrassment caused
+												by sudden audio. We don’t block adult content, but we offer a stress-free way to
+												enjoy it!
+											</p>
+										</div>
 									</div>
 								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
 							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
+						</div>
+						<div class="category__items-wrap">
+							<a href="#popup-3" class="category__item item-category popup-link">
+								<img class="item-category__icon" src="img/logo.gif" alt="logo">
+								<div class="item-category__info">
+									<div class="item-category__header">
+										<h3 class="item-category__title">NoDog.ai</h3>
+										<div class="item-category__details">
+											<span class="item-category__date">2d</span>
+											<img src="img/pin.svg" alt="pin" class="item-category__pin">
+										</div>
+									</div>
+									<ul class="item-category__list">
+										<li class="item-category__item active">Mobile Apps</li>
+										<li class="item-category__item">SaaS</li>
+										<li class="item-category__item">Web</li>
+										<li class="item-category__item">AI</li>
+										<li class="item-category__item">FinTech</li>
+										<li class="item-category__item">FinTech</li>
+										<li class="item-category__item">FinTech</li>
+									</ul>
+								</div>
+							</a>
+							<div id="popup-3" class="popup">
+								<div class="popup__body">
+									<div class="popup__content">
+										<button aria-label="close popup" class="popup__close close-popup">
+											<img src="img/close-md-svgrepo-com.svg" alt="close">
+										</button>
+										<div class="popup__video video">
+											<video id="videoPlayer" controls>
+												<source src="video/video-bg.mp4" type="video/mp4">
+											</video>
+										</div>
+										<div class="popup__description">
+											<p>
+												<a href="#" target="_blank">NoDog.ai</a> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quam enim tempora blanditiis molestias possimus asperiores, repellendus iure placeat ut libero obcaecati soluta ipsa exercitationem rem assumenda facilis voluptatem, velit eligendi, quas repellat cum. Recusandae neque eligendi tenetur autem excepturi? Earum itaque, assumenda ipsum, suscipit tempora quod laudantium animi vitae quia in autem expedita deserunt rem, officiis hic molestiae omnis. Excepturi, consequuntur unde nemo maiores aspernatur rerum esse architecto odit voluptas quo dolore recusandae non aperiam modi, doloribus delectus perferendis!
+											</p>
+										</div>
 									</div>
 								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
 							</div>
-						</a>
+						</div>
+						<div class="category__items-wrap">
+							<a href="#popup-4" class="category__item item-category item-category--background popup-link">
+								<img class="item-category__icon" src="img/logo.gif" alt="logo">
+								<div class="item-category__info">
+									<div class="item-category__header">
+										<h3 class="item-category__title">FlyPing.ai</h3>
+										<div class="item-category__details">
+											<span class="item-category__date">2d</span>
+											<img src="img/pin.svg" alt="pin" class="item-category__pin">
+										</div>
+									</div>
+									<ul class="item-category__list">
+										<li class="item-category__item active">Mobile Apps</li>
+										<li class="item-category__item">SaaS</li>
+										<li class="item-category__item">Web</li>
+										<li class="item-category__item">AI</li>
+										<li class="item-category__item">FinTech</li>
+										<li class="item-category__item">FinTech</li>
+										<li class="item-category__item">FinTech</li>
+									</ul>
+								</div>
+							</a>
+							<div id="popup-4" class="popup">
+								<div class="popup__body">
+									<div class="popup__content">
+										<button aria-label="close popup" class="popup__close close-popup">
+											<img src="img/close-md-svgrepo-com.svg" alt="close">
+										</button>
+										<div class="popup__video video">
+											<video id="videoPlayer" controls>
+												<source src="video/video-bg.mp4" type="video/mp4">
+											</video>
+										</div>
+										<div class="popup__description">
+											<p>
+												<a href="#" target="_blank">FlyPing.ai</a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae maxime laudantium ab atque harum quisquam! Amet non autem laudantium provident itaque culpa consequuntur dignissimos veniam, in debitis libero sed pariatur.
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ipsam ut quam nemo. Alias autem beatae magnam quae ipsam. Quod porro, qui magnam repellendus expedita enim mollitia inventore harum perspiciatis.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date item-category__date--new">New</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date item-category__date--new">New</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date item-category__date--new">New</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date item-category__date--new">New</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-								</ul>
-							</div>
-						</a>
-
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="category__item item-category item-category--background">
-							<img class="item-category__icon" src="img/logo.gif" alt="logo">
-							<div class="item-category__info">
-								<div class="item-category__header">
-									<h3 class="item-category__title">Project name</h3>
-									<div class="item-category__details">
-										<span class="item-category__date">2d</span>
-										<img src="img/pin.svg" alt="pin" class="item-category__pin">
-									</div>
-								</div>
-								<ul class="item-category__list">
-									<li class="item-category__item active">Mobile Apps</li>
-									<li class="item-category__item">SaaS</li>
-									<li class="item-category__item">Web</li>
-									<li class="item-category__item">AI</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-									<li class="item-category__item">FinTech</li>
-
-								</ul>
-							</div>
-						</a>
 					</div>
 
 				</div>
