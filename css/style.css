@@ -214,7 +214,7 @@ body.lock {
 }
 .header.scrolled {
   background-color: #fff;
-  border-bottom: 0.0625rem solid rgba(221, 82, 32, 0.434);
+  border-bottom: 0.0625rem solid rgba(221, 82, 32, 0.25);
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
@@ -933,8 +933,8 @@ body.lock {
 .popup__content {
   border-top: 0.5rem solid #ffd500;
   border-radius: 0.5rem;
-  max-width: 43.75rem;
-  max-height: 37.5rem;
+  max-width: 48.75rem;
+  max-height: 43.75rem;
   background-color: #fff7d7;
   padding: 2.5rem 1.25rem 1.25rem 1.25rem;
   color: #000;
@@ -954,6 +954,7 @@ body.lock {
 @media (max-width: 30em) {
   .popup__content {
     padding: 2.1875rem 0.625rem 0.625rem 0.625rem;
+    max-height: 31.25rem;
   }
 }
 .popup__close {
@@ -982,8 +983,8 @@ body.lock {
   }
 }
 .popup__video {
-  max-width: 31.25rem;
-  aspect-ratio: 500/300;
+  max-width: 43.75rem;
+  aspect-ratio: 700/420;
 }
 .popup__video video {
   border-radius: 0.625rem;
