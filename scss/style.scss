@@ -568,6 +568,9 @@ body.lock {
 		p {
 			@include adaptiveValue("font-size", 18, 16);
 			line-height: 1.2;
+			&:not(:last-child){
+				margin-bottom: toRem(10);
+			}
 		}
 		a {
 			@include adaptiveValue("font-size", 20, 18);

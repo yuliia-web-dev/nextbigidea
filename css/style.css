@@ -1020,6 +1020,9 @@ body.lock {
     font-size: 1rem;
   }
 }
+.popup__description p:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
 .popup__description a {
   color: var(--accent-color);
   font-weight: 500;
