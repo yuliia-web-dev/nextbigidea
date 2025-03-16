@@ -311,7 +311,7 @@ body.lock {
 
 .category {
 	position: relative;
-	@include adaptiveValue("padding-top", 100, 50);
+	@include adaptiveValue("padding-top", 100, 25);
 	@include adaptiveValue("padding-bottom", 100, 50);
 
 	// .category__container
@@ -332,13 +332,13 @@ body.lock {
 	&__title {
 		max-width: toRem(500);
 		margin: 0 auto;
-		font-size: toRem(35);
+		@include adaptiveValue("font-size",35,28);
 		font-weight: 600;
 		text-align: center;
 		line-height: 1.2;
 		text-transform: capitalize;
 		&:not(:last-child) {
-			margin-bottom: toRem(30);
+		@include adaptiveValue("margin-bottom",30,20);
 		}
 	}
 	&__text {
@@ -347,7 +347,7 @@ body.lock {
 		line-height: 1.4;
 		text-align: center;
 		&:not(:last-child) {
-			margin-bottom: toRem(60);
+		@include adaptiveValue("margin-bottom",60,30);
 		}
 	}
 	&__item {
