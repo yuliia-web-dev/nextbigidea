@@ -948,6 +948,7 @@ body.lock {
       -ms-flex-align: center;
           align-items: center;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 @media (max-width: 30em) {
   .popup__content {

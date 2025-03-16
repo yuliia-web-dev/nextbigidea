@@ -520,6 +520,7 @@ body.lock {
 		flex-direction: column;
 		align-items: center;
 		overflow-y: auto;
+		overflow-x: hidden;
 		@media (max-width: toEm(480)) {
 			padding: toRem(35) toRem(10) toRem(10) toRem(10);
 			max-height: toRem(500);
