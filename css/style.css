@@ -257,15 +257,27 @@ body.lock {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   max-width: 12.5rem;
-  height: 1.875rem;
+  max-height: 1.875rem;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media (max-width: 28.4375em) {
+@media (max-width: 31.5625em) {
   .header__logo, .footer__logo {
-    max-width: 5.625rem;
+    display: none;
+  }
+}
+.header__logo-mobile {
+  display: none;
+}
+@media (max-width: 31.5625em) {
+  .header__logo-mobile {
+    display: block;
+    max-width: 4.5625rem;
+    max-height: 1.875rem;
+    width: 100%;
+    height: 100%;
   }
 }
 .header__buttons-wrap {
