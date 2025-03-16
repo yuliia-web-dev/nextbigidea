@@ -604,8 +604,8 @@ body.lock {
 }
 @media (any-hover: hover) {
   .button--transparent:hover {
-    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 }
 .button--background {
@@ -614,8 +614,9 @@ body.lock {
 }
 @media (any-hover: hover) {
   .button--background:hover {
-    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.277);
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.277);
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #c11818;
   }
 }
 
