@@ -306,7 +306,7 @@ body.lock {
   padding-top: 5.625rem;
   padding-bottom: 5.625rem;
   background-image: url("../img/hero-bg.png");
-  background-size: contain;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: right;
   position: relative;
@@ -334,7 +334,7 @@ body.lock {
     margin-top: 3rem;
   }
 }
-@media (max-width: 60em) {
+@media (max-width: 47.99875em) {
   .hero {
     background-image: none;
   }
@@ -353,9 +353,14 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 50rem;
+  max-width: 43.75rem;
 }
-@media (max-width: 60em) {
+@media (max-width: 65.3125em) {
+  .hero__content {
+    max-width: 28.125rem;
+  }
+}
+@media (max-width: 47.99875em) {
   .hero__content {
     -webkit-box-align: center;
         -ms-flex-align: center;
