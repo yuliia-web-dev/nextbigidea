@@ -553,8 +553,7 @@ body.lock {
 		color: var(--accent-color);
 		text-align: center;
 		line-height: 1.2;
-		text-transform: capitalize;
-		&:not(:last-child) {
+ 		&:not(:last-child) {
 			margin-bottom: toRem(25);
 		}
 	}

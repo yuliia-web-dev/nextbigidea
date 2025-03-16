@@ -986,7 +986,6 @@ body.lock {
   color: var(--accent-color);
   text-align: center;
   line-height: 1.2;
-  text-transform: capitalize;
 }
 @media (min-width: 101.875em) {
   .popup__title {
