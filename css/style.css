@@ -252,7 +252,7 @@ body.lock {
     gap: 1.25rem;
   }
 }
-.header__logo, .footer__logo {
+.header__logo {
   z-index: 20;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -264,7 +264,7 @@ body.lock {
      object-fit: contain;
 }
 @media (max-width: 31.5625em) {
-  .header__logo, .footer__logo {
+  .header__logo {
     display: none;
   }
 }
@@ -1142,6 +1142,16 @@ body.lock {
     gap: 2.5rem;
     padding: 1.25rem 0rem;
   }
+}
+.footer__logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: 12.5rem;
+  max-height: 1.875rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .social {
   display: -webkit-box;
