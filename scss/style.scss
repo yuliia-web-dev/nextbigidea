@@ -527,7 +527,7 @@ body.lock {
 		border-top: toRem(8) solid #ffd500;
 		border-radius: toRem(8);
 		max-width: toRem(780);
-		max-height: toRem(700);
+		max-height: toRem(800);
 		background-color: #fff7d7;
 		padding: toRem(40) toRem(20) toRem(20) toRem(20);
 		color: #000;
@@ -575,8 +575,8 @@ body.lock {
 		}
 	}
 	&__video {
-		max-width: toRem(500);
-		aspect-ratio: 500 / 281;
+		max-width: 100%;
+		aspect-ratio:16 /9;
 
 		video {
 			border-radius: toRem(10);

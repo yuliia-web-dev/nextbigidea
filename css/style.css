@@ -1011,7 +1011,7 @@ body.lock {
   border-top: 0.5rem solid #ffd500;
   border-radius: 0.5rem;
   max-width: 48.75rem;
-  max-height: 43.75rem;
+  max-height: 50rem;
   background-color: #fff7d7;
   padding: 2.5rem 1.25rem 1.25rem 1.25rem;
   color: #000;
@@ -1093,8 +1093,8 @@ body.lock {
   margin-bottom: 1.5625rem;
 }
 .popup__video {
-  max-width: 31.25rem;
-  aspect-ratio: 500/281;
+  max-width: 100%;
+  aspect-ratio: 16/9;
 }
 .popup__video video {
   border-radius: 0.625rem;
