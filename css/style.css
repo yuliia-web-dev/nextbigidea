@@ -1012,7 +1012,6 @@ body.lock {
   padding: 1.875rem 0.625rem;
 }
 .popup__content {
-  border-top: 0.5rem solid #ffd500;
   border-radius: 0.5rem;
   max-width: 48.75rem;
   max-height: 48.75rem;
