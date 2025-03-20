@@ -101,9 +101,9 @@ body.lock {
 		@media (max-width: toEm(505)) {
 			display: block;
 			max-width: toRem(73);
-			max-height: toRem(30);
+			object-fit: contain;
 			width: 100%;
-			height: 100%;
+			height: toRem(30);
 		}
 	}
 	&__buttons-wrap {
