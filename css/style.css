@@ -1011,11 +1011,12 @@ body.lock {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1.875rem 0.625rem;
+  max-height: 100vh;
 }
 .popup__content {
   border-radius: 0.5rem;
   max-width: 48.75rem;
-  max-height: 48.75rem;
+  max-height: 90vh;
   background-color: #fff;
   padding: 2.5rem 1.25rem 1.25rem 1.25rem;
   color: #000;
@@ -1030,8 +1031,10 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
+  -ms-touch-action: auto;
+      touch-action: auto;
+  -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 30em) {
   .popup__content {
@@ -1235,6 +1238,9 @@ body.lock {
 .popup.open {
   visibility: visible;
   opacity: 1;
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .popup:not(.open) .popup__close {
