@@ -1040,7 +1040,7 @@ body.lock {
 }
 .popup__close {
   position: absolute;
-  top: 0.3125rem;
+  top: 0.625rem;
   right: 0.625rem;
   width: 1.875rem;
   height: 1.875rem;
@@ -1227,6 +1227,7 @@ body.lock {
 @media (max-width: 30rem) {
   .popup__button {
     width: 100%;
+    padding: 0.625rem 0.9375rem;
   }
 }
 

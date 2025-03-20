@@ -544,7 +544,7 @@ body.lock {
 	}
 	&__close {
 		position: absolute;
-		top: toRem(5);
+		top: toRem(10);
 		right: toRem(10);
 		width: toRem(30);
 		height: toRem(30);
@@ -620,6 +620,8 @@ body.lock {
 		padding: toRem(15) toRem(35);
 		@media(max-width: toRem(480)){
 			width: 100%;
+					padding: toRem(10) toRem(15);
+
 		}
 	}
 }
