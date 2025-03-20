@@ -595,7 +595,7 @@ body.lock {
 	}
 	&__description {
 		p {
-			color: #696b6c;
+			color: #5a5c5d;
 			@include adaptiveValue("font-size", 18, 16);
 			line-height: 1.2;
 			&:not(:last-child) {
