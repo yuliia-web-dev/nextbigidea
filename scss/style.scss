@@ -30,11 +30,6 @@ html {
 }
 body {
 	font-family: "Poppins";
-	&.menu-open {
-		overflow: hidden;
-		touch-action: none;
-		overscroll-behavior: none;
-	}
 }
 body.lock {
 	overflow: hidden;
@@ -523,6 +518,8 @@ body.lock {
 		justify-content: center;
 		padding: toRem(30) toRem(10);
 		max-height: 100vh;
+			overflow-y: auto;
+
 	}
 	&__content {
 		border-radius: toRem(8);
@@ -629,7 +626,6 @@ body.lock {
 .popup.open {
 	visibility: visible;
 	opacity: 1;
-	overflow: hidden;
 	touch-action: none;
 }
 .popup:not(.open) .popup__close {
