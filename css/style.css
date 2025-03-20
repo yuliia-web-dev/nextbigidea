@@ -1029,7 +1029,6 @@ body.lock {
 @media (max-width: 30em) {
   .popup__content {
     padding: 2.1875rem 0.625rem 1.25rem 0.625rem;
-    max-height: 31.25rem;
   }
 }
 .popup__close {
