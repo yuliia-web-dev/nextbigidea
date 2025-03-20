@@ -590,7 +590,7 @@ body.lock {
 			object-fit: cover;
 		}
 		&:not(:last-child) {
-			margin-bottom: toRem(30);
+			@include adaptiveValue("margin-bottom", 50, 30);
 		}
 	}
 	&__description {
@@ -613,8 +613,8 @@ body.lock {
 				}
 			}
 		}
-		&:not(:last-child) {
-			margin-bottom: toRem(30);
+			&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 70, 30);
 		}
 	}
 	&__button {
