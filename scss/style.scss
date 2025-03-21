@@ -516,11 +516,9 @@ body.lock {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: toRem(30) toRem(10);
 		max-height: 100vh;
 	}
 	&__content {
-		border-radius: toRem(8);
 		max-width: toRem(780);
 		max-height: 90vh;
 		background-color: #fff;

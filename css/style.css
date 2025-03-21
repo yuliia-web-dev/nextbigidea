@@ -1003,11 +1003,9 @@ body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1.875rem 0.625rem;
   max-height: 100vh;
 }
 .popup__content {
-  border-radius: 0.5rem;
   max-width: 48.75rem;
   max-height: 90vh;
   background-color: #fff;
