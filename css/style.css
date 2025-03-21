@@ -1009,7 +1009,7 @@ body.lock {
 .popup__content {
   border-radius: 0.5rem;
   max-width: 48.75rem;
-  max-height: 80vh;
+  max-height: 90vh;
   background-color: #fff;
   padding: 2.5rem 1.25rem 1.25rem 1.25rem;
   color: #000;
@@ -1025,6 +1025,14 @@ body.lock {
       -ms-flex-align: center;
           align-items: center;
   overflow-y: auto;
+  border: 0.625rem solid rgba(87, 86, 86, 0.438);
+  border-radius: 1.5625rem;
+}
+@media (max-width: 47.99875em) {
+  .popup__content {
+    max-height: 80vh;
+    border: 0.3rem solid rgba(87, 86, 86, 0.438);
+  }
 }
 @media (max-width: 30em) {
   .popup__content {
@@ -1068,24 +1076,24 @@ body.lock {
 }
 .popup__title {
   font-weight: 600;
-  color: var(--accent-color);
+  color: #000;
   text-align: center;
   line-height: 1.2;
 }
 @media (min-width: 101.875em) {
   .popup__title {
-    font-size: 1.875rem;
+    font-size: 2.1875rem;
   }
 }
 @media (min-width: 20em) and (max-width: 101.875em) {
-  @supports (font-size: clamp( 1.5625rem , 1.4861641221rem  +  0.3816793893vw , 1.875rem )) {
+  @supports (font-size: clamp( 1.5625rem , 1.4098282443rem  +  0.7633587786vw , 2.1875rem )) {
     .popup__title {
-      font-size: clamp( 1.5625rem , 1.4861641221rem  +  0.3816793893vw , 1.875rem );
+      font-size: clamp( 1.5625rem , 1.4098282443rem  +  0.7633587786vw , 2.1875rem );
     }
   }
-  @supports not (font-size: clamp( 1.5625rem , 1.4861641221rem  +  0.3816793893vw , 1.875rem )) {
+  @supports not (font-size: clamp( 1.5625rem , 1.4098282443rem  +  0.7633587786vw , 2.1875rem )) {
     .popup__title {
-      font-size: calc(1.5625rem + 0.3125 * (100vw - 20rem) / 81.875);
+      font-size: calc(1.5625rem + 0.625 * (100vw - 20rem) / 81.875);
     }
   }
 }

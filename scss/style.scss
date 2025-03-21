@@ -518,12 +518,11 @@ body.lock {
 		justify-content: center;
 		padding: toRem(30) toRem(10);
 		max-height: 100vh;
-
 	}
 	&__content {
 		border-radius: toRem(8);
 		max-width: toRem(780);
-		max-height: 80vh;
+		max-height: 90vh;
 		background-color: #fff;
 		padding: toRem(40) toRem(20) toRem(20) toRem(20);
 		color: #000;
@@ -532,7 +531,14 @@ body.lock {
 		flex-direction: column;
 		align-items: center;
 		overflow-y: auto;
-		
+		border: 0.625rem solid rgba(87, 86, 86, 0.438);
+		border-radius: 1.5625rem;
+
+		@media (max-width: toEm(767.98)) {
+			max-height: 80vh;
+						border: 0.3rem solid rgba(87, 86, 86, 0.438);
+
+		}
 		@media (max-width: toEm(480)) {
 			padding: toRem(35) toRem(10) toRem(20) toRem(10);
 		}
@@ -564,9 +570,9 @@ body.lock {
 		}
 	}
 	&__title {
-		@include adaptiveValue("font-size", 30, 25);
+		@include adaptiveValue("font-size", 35, 25);
 		font-weight: 600;
-		color: var(--accent-color);
+		color: #000;
 		text-align: center;
 		line-height: 1.2;
 		&:not(:last-child) {
