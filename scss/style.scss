@@ -516,6 +516,7 @@ body.lock {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: toRem(30) toRem(10);
 		max-height: 100vh;
 	}
 	&__content {
