@@ -340,6 +340,7 @@ body.lock {
   }
 }
 .hero__content {
+  padding-left: 3.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,7 +352,12 @@ body.lock {
 }
 @media (max-width: 65.3125em) {
   .hero__content {
-    max-width: 28.125rem;
+    max-width: 31.25rem;
+  }
+}
+@media (max-width: 52.8125em) {
+  .hero__content {
+    padding-left: 0;
   }
 }
 @media (max-width: 50em) {
@@ -485,7 +491,7 @@ body.lock {
   }
 }
 .hero__button {
-  padding: 1.25rem 0.625rem;
+  padding: 1.25rem 1.875rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
