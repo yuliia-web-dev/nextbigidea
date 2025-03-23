@@ -147,9 +147,8 @@ body.lock {
 		@media (max-width: toEm(1045)) {
 			max-width: toRem(500);
 		}
-			@media (max-width: toEm(845)) {
-					padding-left: 0;
-			
+		@media (max-width: toEm(845)) {
+			padding-left: 0;
 		}
 		@media (max-width: toEm(800)) {
 			align-items: center;
@@ -359,7 +358,6 @@ body.lock {
 .item-category {
 	width: 100%;
 	height: auto;
-	overflow: hidden;
 	font-size: 1.2rem;
 	padding: toRem(20) toRem(25);
 	border-radius: toRem(8);
@@ -369,6 +367,7 @@ body.lock {
 	gap: toRem(20);
 	position: relative;
 	transition: all 0.3s ease-out;
+	overflow: hidden;
 	@media (any-hover: hover) {
 		&:hover {
 			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -403,6 +402,7 @@ body.lock {
 		display: flex;
 		flex-direction: column;
 		gap: toRem(30);
+		overflow: hidden;
 	}
 
 	// .item-category__header
@@ -457,8 +457,12 @@ body.lock {
 
 	&__list {
 		display: flex;
+		min-width: 100%;
+
+		flex-wrap: nowrap;
 		gap: toRem(10);
 		overflow-x: auto;
+		-ms-scroll-snap-type: x mandatory;
 		scroll-snap-type: x mandatory;
 		scrollbar-width: thin;
 		scrollbar-color: rgba(209, 91, 52, 0.3) rgba(255, 255, 255, 0.777);
@@ -492,12 +496,7 @@ body.lock {
 		border-radius: toRem(4);
 		background-color: #fff;
 		border: toRem(1) solid #ddd;
-		&:last-child {
-			margin-right: toRem(50);
-			@media (max-width: toEm(480)) {
-				margin-right: 0;
-			}
-		}
+
 		&.active {
 			background-color: #ffd500;
 		}
