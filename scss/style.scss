@@ -567,13 +567,10 @@ body.lock {
 			}
 		}
 	}
-	&__title {
-		font-family: "Manrope";
-		@include adaptiveValue("font-size", 35, 25);
-		font-weight: 600;
-		color: #000;
-		text-align: center;
-		line-height: 1.2;
+	&__logo {
+		width: 112px;
+height: 33.789px;
+flex-shrink: 0;
 		&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 42, 25);
 		}

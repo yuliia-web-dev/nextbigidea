@@ -1072,54 +1072,31 @@ body.lock {
             transform: scale(1.1);
   }
 }
-.popup__title {
-  font-family: "Manrope";
-  font-weight: 600;
-  color: #000;
-  text-align: center;
-  line-height: 1.2;
+.popup__logo {
+  width: 112px;
+  height: 33.789px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media (min-width: 95.625em) {
-  .popup__title {
-    font-size: 2.1875rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 95.625em) {
-  @supports (font-size: clamp( 1.5625rem , 1.3972107438rem  +  0.826446281vw , 2.1875rem )) {
-    .popup__title {
-      font-size: clamp( 1.5625rem , 1.3972107438rem  +  0.826446281vw , 2.1875rem );
-    }
-  }
-  @supports not (font-size: clamp( 1.5625rem , 1.3972107438rem  +  0.826446281vw , 2.1875rem )) {
-    .popup__title {
-      font-size: calc(1.5625rem + 0.625 * (100vw - 20rem) / 75.625);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .popup__title {
-    font-size: 1.5625rem;
-  }
-}
-@media (min-width: 95.625em) {
-  .popup__title:not(:last-child) {
+  .popup__logo:not(:last-child) {
     margin-bottom: 2.625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 95.625em) {
   @supports (margin-bottom: clamp( 1.5625rem , 1.2815082645rem  +  1.4049586777vw , 2.625rem )) {
-    .popup__title:not(:last-child) {
+    .popup__logo:not(:last-child) {
       margin-bottom: clamp( 1.5625rem , 1.2815082645rem  +  1.4049586777vw , 2.625rem );
     }
   }
   @supports not (margin-bottom: clamp( 1.5625rem , 1.2815082645rem  +  1.4049586777vw , 2.625rem )) {
-    .popup__title:not(:last-child) {
+    .popup__logo:not(:last-child) {
       margin-bottom: calc(1.5625rem + 1.0625 * (100vw - 20rem) / 75.625);
     }
   }
 }
 @media (max-width: 20em) {
-  .popup__title:not(:last-child) {
+  .popup__logo:not(:last-child) {
     margin-bottom: 1.5625rem;
   }
 }
