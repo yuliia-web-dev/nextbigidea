@@ -523,22 +523,20 @@ body.lock {
 		max-height: 100vh;
 	}
 	&__content {
+		overflow: hidden;
 		max-width: toRem(780);
 		max-height: 90vh;
 		background-color: #fff;
-		padding: toRem(40) toRem(20) toRem(20) toRem(20);
+		padding: toRem(40) toRem(47) toRem(40) toRem(47);
 		color: #000;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		overflow-y: auto;
-		border: 0.625rem solid rgba(87, 86, 86, 0.438);
-		border-radius: 1.5625rem;
-
+		border-radius: toRem(6);
 		@media (max-width: toEm(767.98)) {
 			max-height: 80vh;
-			border: 0.3rem solid rgba(87, 86, 86, 0.438);
 		}
 		@media (max-width: toEm(480)) {
 			padding: toRem(35) toRem(10) toRem(20) toRem(10);
@@ -550,8 +548,7 @@ body.lock {
 		right: toRem(10);
 		width: toRem(30);
 		height: toRem(30);
-		background-color: #fff;
-		border: 0.0625rem solid #e9e9ea;
+		background: rgba(217, 217, 217, 0.6);
 		border-radius: toRem(6);
 		display: flex;
 		align-items: center;
@@ -571,13 +568,14 @@ body.lock {
 		}
 	}
 	&__title {
+		font-family: "Manrope";
 		@include adaptiveValue("font-size", 35, 25);
 		font-weight: 600;
 		color: #000;
 		text-align: center;
 		line-height: 1.2;
 		&:not(:last-child) {
-			margin-bottom: toRem(25);
+		@include adaptiveValue("margin-bottom", 42, 25);
 		}
 	}
 
@@ -592,12 +590,13 @@ body.lock {
 			object-fit: cover;
 		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 50, 30);
+			@include adaptiveValue("margin-bottom", 27, 25);
 		}
 	}
 	&__description {
 		p {
-			color: #5a5c5d;
+			color: #000;
+			font-family: "Manrope";
 			@include adaptiveValue("font-size", 18, 16);
 			line-height: 1.2;
 			&:not(:last-child) {
@@ -605,9 +604,9 @@ body.lock {
 			}
 		}
 		a {
-			@include adaptiveValue("font-size", 20, 18);
+			font-weight: 600;
+			@include adaptiveValue("font-size", 18, 16);
 			color: var(--accent-color);
-			font-weight: 500;
 			transition: color 0.3s;
 			@media (any-hover: hover) {
 				&:hover {
@@ -616,10 +615,11 @@ body.lock {
 			}
 		}
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 70, 30);
+			@include adaptiveValue("margin-bottom", 27, 25);
 		}
 	}
 	&__button {
+		color: #000;
 		padding: toRem(15) toRem(35);
 		@media (max-width: toRem(480)) {
 			width: 100%;
