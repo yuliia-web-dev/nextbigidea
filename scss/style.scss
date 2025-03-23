@@ -568,11 +568,15 @@ body.lock {
 		}
 	}
 	&__logo {
-		width: 112px;
-height: 33.789px;
-flex-shrink: 0;
+		width: toRem(112);
+		height: toRem(34);
+		flex-shrink: 0;
+		@media (max-width: toEm(480)) {
+			width: toRem(90);
+			height: toRem(20);
+		}
 		&:not(:last-child) {
-		@include adaptiveValue("margin-bottom", 42, 25);
+			@include adaptiveValue("margin-bottom", 42, 25);
 		}
 	}
 
@@ -617,7 +621,8 @@ flex-shrink: 0;
 	}
 	&__button {
 		color: #000;
-		padding: toRem(15) toRem(35);
+		font-family: "Manrope";
+		padding: toRem(20) toRem(40);
 		@media (max-width: toRem(480)) {
 			width: 100%;
 			padding: toRem(10) toRem(15);

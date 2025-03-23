@@ -1073,10 +1073,16 @@ body.lock {
   }
 }
 .popup__logo {
-  width: 112px;
-  height: 33.789px;
+  width: 7rem;
+  height: 2.125rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+@media (max-width: 30em) {
+  .popup__logo {
+    width: 5.625rem;
+    height: 1.25rem;
+  }
 }
 @media (min-width: 95.625em) {
   .popup__logo:not(:last-child) {
@@ -1220,7 +1226,8 @@ body.lock {
 }
 .popup__button {
   color: #000;
-  padding: 0.9375rem 2.1875rem;
+  font-family: "Manrope";
+  padding: 1.25rem 2.5rem;
 }
 @media (max-width: 30rem) {
   .popup__button {
