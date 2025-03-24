@@ -622,6 +622,7 @@ body.lock {
 	&__button {
 		color: #000;
 		font-family: "Manrope";
+		font-weight: 600;
 		padding: toRem(20) toRem(40);
 		@media (max-width: toRem(480)) {
 			width: 100%;

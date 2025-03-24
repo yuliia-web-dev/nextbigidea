@@ -1227,6 +1227,7 @@ body.lock {
 .popup__button {
   color: #000;
   font-family: "Manrope";
+  font-weight: 600;
   padding: 1.25rem 2.5rem;
 }
 @media (max-width: 30rem) {
