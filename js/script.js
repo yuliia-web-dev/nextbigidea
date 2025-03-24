@@ -70,12 +70,19 @@ function popupOpen(curentPopup) {
 
 function popupClose(popupActive, doUnlock = true) {
 	if (unlock) {
+		const video = popupActive.querySelector("video");
+		if (video) {
+			video.pause();
+			video.currentTime = 0; 
+		}
+
 		popupActive.classList.remove('open');
 		if (doUnlock) {
 			bodyUnLock();
 		}
 	}
 }
+
 
 function bodyLock() {
 	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
@@ -109,4 +116,5 @@ document.addEventListener('keydown', function (e) {
 		}
 	}
 });
+
 
